@@ -1,0 +1,297 @@
+<header class="header">
+
+    <a href="home" class="logo">
+        SIC
+    </a>
+
+    <ul class="navbar">
+
+        <li class="nav-item">
+            <a href="About" class="nav-link">About</a>
+        </li>
+
+        <li class="nav-item">
+            <a href="Projects" class="nav-link">Projects</a>
+        </li>
+
+        <li class="nav-item">
+            <a href="Contact" class="nav-link">Contact</a>
+        </li>
+
+    </ul>
+
+    <div class="header-icon">
+
+        <i class="fas fa-moon"></i>
+
+        <div class="fas fa-stream" id="menu-icon"></div>
+
+    </div>
+    
+</header>
+
+<!-- Home Section -->
+<section class="home" id="home">
+    
+    <div class="home-text">
+
+        <h1>Hi, my name is <span>Solomon Ifeanyichukwu Chioma</span> <br>
+            <b>I'm a Front-end Developer</b> 
+         </h1>
+
+         <a href="#" class="btn">Download CV</a>
+
+    </div>
+
+</section>
+
+<!-- Container section -->
+<section class="container">
+
+    <div class="container-box">
+
+        <a href="" class="container-mainbox">
+            
+            <div class="container-img">
+                <i class="fa fa-github"></i>
+            </div>
+
+            <div class="container-text">
+                <p>Github</p>
+            </div>
+        </a>
+
+        <a href="" class="container-mainbox">
+
+            <div class="container-img">
+                <i class="fa fa-twitter"></i>
+            </div>
+
+            <div class="container-text">
+                <p>Twitter</p>
+            </div>
+        </a>
+
+        <a href="" class="container-mainbox">
+
+            <div class="container-img">
+                <i class="fa fa-linkedin"></i>
+            </div>
+
+            <div class="container-text">
+                <p>LinkedIn</p>
+            </div>
+        </a>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="home" id="home">
+
+    <div class="about-img">
+        <img src="/Images/profile_1.jpg" alt="homepage-picture">
+    </div>
+
+    <div class="about-text">
+        <h1>About</h1>
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+body{
+    color: darkblue;
+}
+
+.header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 23px 15%;
+    background: transparent;
+    transition: all .38s ease;
+}
+
+header.sticky{
+    padding: 10px 15%;
+    background-color: white;
+    box-shadow: 0 2px 5px darkblue;
+}
+
+.logo{
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: orange;
+    letter-spacing: 0.02rem;
+    animation:  rotation 3s infinite linear;
+    border-top: 4px solid darkblue;
+    border-bottom: 4px solid darkblue;
+}
+
+@keyframes rotation {
+    from{
+        transform: rotate(0deg);
+    }to{
+        transform: rotate(360deg);
+    }
+}
+
+.navbar{
+    display: flex;
+}
+
+.navbar .nav-link{
+    padding: 5px 10px;
+    margin:  2px 23px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    font-family: 'Courier New', Courier, monospace;
+    transition: all .38s ease;
+}
+
+.header-icon{
+    display: flex;
+    align-items: center;
+    padding: 5px 5px;
+    background: orange;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.header-icon i{
+    color: white;
+    margin: 0 5px;
+}
+
+#menu-icon{
+    display: none;
+    z-index: 10001;
+}
+
+ /* SECTION  */
+
+section{
+    padding: 90px 10% 80px;
+    margin-top: 13%;
+}
+
+/* HOME */
+
+.home{
+    height: 60vh;
+    width: 100%;
+    position: relative;
+}
+
+.home-text{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.home-text h1{
+    margin-bottom: 2rem;
+}
+
+.home-text h1 span{
+    font-size: 3.2rem;
+    font-variant: small-caps;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    background-image: linear-gradient( -225deg, #231557 0%, #44107a 29%, #ff1361 67%, #fff800 100%);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 3s linear infinite;
+}
+
+@keyframes textclip {
+    to {
+      background-position: 200% center;
+    }
+  
+}
+
+.btn{
+    display: inline-block;
+    padding: 14px 10px;
+    background: rgb(250, 241, 241);
+    box-shadow: 0 4px 8px 0 darkblue;
+    border-radius: 1rem;
+    transition: all .38s ease;
+    font-weight: 600;
+    transition: all.38s ease;
+}
+
+.btn:hover{
+    letter-spacing: 1px;
+    transform: translateX(10px);
+}
+
+.container-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: rgb(222, 247, 255);
+    border-radius: 1rem;
+}
+
+.container-mainbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    height: 60px;
+    transition: all .38s ease;
+}
+
+.container-img{
+    font-size: 1.5rem;
+}
+
+.container-text{
+    font-size: 1.1rem;
+    font-family: cursive;
+    font-weight: 600;
+}
